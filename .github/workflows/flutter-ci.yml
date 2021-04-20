@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-test-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -60,7 +60,7 @@ jobs:
           git config --global user.email markus.buergler@mohemian.com
           git config --global user.name markus-mohemian
           git status
-          git remote add origin https://${{secrets.GH_DEPLOY}}@github.com/markus-mohemian/flutter-test.git
+          git remote add origin https://${{secrets.GITHUB_TOKEN}}@github.com/markus-mohemian/flutter-test.git
           git checkout -b gh-pages
           git add --all
           git commit -m "Update pages"
