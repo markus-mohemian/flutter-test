@@ -53,15 +53,8 @@ jobs:
         working-directory: ./web
 
       # Deploy to Github pages
-      - name: Deploy to GH Pages
-        run: |
-          cd build/web
-          git init
-          git config --global user.email markus.buergler@mohemian.com
-          git config --global user.name markus-mohemian
-          git status
-          git remote add origin https://${{secrets.GITHUB_TOKEN}}@github.com/markus-mohemian/flutter-test.git
-          git checkout -b gh-pages
-          git add --all
-          git commit -m "Update pages"
-          git push origin gh-pages -f
+      - name: Deploy to GH Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@master
+        with:
+          branch: gh-pages
+          folder: build/web
