@@ -15,7 +15,8 @@ dependencies:
     sdk: flutter
   equatable:
   dartz: ^0.10.0-nullsafety.1
-  bloc:
+  get_it:
+  flutter_bloc:
 
   cupertino_icons: ^1.0.2
 
@@ -24,6 +25,7 @@ dev_dependencies:
     sdk: flutter
   mockito: ^5.0.4
   build_runner: ^1.12.2
+  bloc_test:
 
 flutter:
   uses-material-design: true

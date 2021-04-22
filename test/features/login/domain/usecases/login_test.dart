@@ -23,7 +23,7 @@ main() {
     // given
     when(mockLoginRepository.login(any)).thenAnswer((_) async => Right(true));
     // when
-    final result = await usecase.call(tLogin);
+    final result = await usecase(Params(login: tLogin));
     // then
     expect(result, Right(true));
     verify(mockLoginRepository.login(tLogin)).called(1);
