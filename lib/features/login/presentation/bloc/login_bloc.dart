@@ -12,9 +12,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginBloc({required this.loginUseCase}) : super(InitialLoginState());
 
   @override
-  LoginState get initialState => InitialLoginState();
-
-  @override
   Stream<LoginState> mapEventToState(
     LoginEvent event,
   ) async* {

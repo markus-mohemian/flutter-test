@@ -25,7 +25,7 @@ void main() {
     'initial state should be InitialLoginState',
     () async {
       // assert
-      expect(bloc.initialState, equals(InitialLoginState()));
+      expect(bloc.state, equals(InitialLoginState()));
     },
   );
 
